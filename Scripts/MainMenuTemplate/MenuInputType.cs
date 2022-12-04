@@ -4,6 +4,8 @@ using TMPro;
 
 public abstract class MenuInputType : MonoBehaviour
 {
+    [SerializeField] protected Object sceneToGoOnInput;
+
     protected string instructions = "";
 
     public virtual void SetInputText(TextMeshProUGUI inputText, string postText = "") 
@@ -17,6 +19,6 @@ public abstract class MenuInputType : MonoBehaviour
 
     protected void GoToGameplay()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(sceneToGoOnInput.name);
     }
 }
