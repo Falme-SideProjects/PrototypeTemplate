@@ -18,7 +18,7 @@ public class Subject : ISubject
 	{
         for(int a=0; a<observers.Count; a++)
         {
-            observers[a].Update();
+            observers[a].Refresh();
         }
 	}
 

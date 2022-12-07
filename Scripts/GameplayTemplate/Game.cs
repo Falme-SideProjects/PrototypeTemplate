@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    [SerializeField] private GameObject[] observers;
+    [SerializeField] private Observer[] observers;
 
     private ISubject subject;
 
@@ -12,7 +12,7 @@ public class Game : MonoBehaviour
         subject = new Subject();
 
         for(int a=0; a<observers.Length; a++)
-            subject.Attach(observers[a].GetComponent<IObserver>());
+            subject.Attach(observers[a].GetComponent<Observer>());
     }
 
     // Update is called once per frame
